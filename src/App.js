@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const intervalID = setInterval(() => {
       setIsLoading(true);
-      fetch('http://51.20.55.126/get_sensor_data')
+      fetch('http://13.50.185.242/get_sensor_data')
       .then(response => response.json())
       .then(data => {
         console.log(data);
@@ -35,7 +35,7 @@ function App() {
       setMessages(prevMessages => [...prevMessages, {sender: 'user', text: userInput}]);
     }
 
-    fetch('http://51.20.55.126/chat', {
+    fetch('http://13.50.185.242/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
